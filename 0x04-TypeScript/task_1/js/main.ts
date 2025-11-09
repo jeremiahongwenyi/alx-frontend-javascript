@@ -47,16 +47,7 @@ function printTeacher({
 
 console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 
-interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
-}
-
-interface StudentClassInterface {
-  workOnHomework(): string;
-  displayName(): string;
-}
-
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
@@ -78,4 +69,3 @@ const student = new StudentClass("John", "Doe");
 
 console.log(student.displayName()); // John
 console.log(student.workOnHomework()); // Currently working
-
