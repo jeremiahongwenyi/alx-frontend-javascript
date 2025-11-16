@@ -47,16 +47,12 @@ function createEmployee(salary: string | number): Director | Teacher {
   return new Director();
 }
 
-function isDirector(employee: Teacher | Director): employee is Director {
-  return employee instanceof Director;
-}
+type Subjects = "Math" | "History";
 
-function executeWork(employee: Teacher | Director): string {
-  if (isDirector(employee)) {
-    return employee.workDirectorTasks();
+export function teachClass(todayClass: Subjects): string {
+  if (todayClass === "Math") {
+    return "Teaching Math";
   } else {
-    return employee.workTeacherTasks();
+    return "Teaching History";
   }
 }
-
-executeWork(createEmployee(300));
