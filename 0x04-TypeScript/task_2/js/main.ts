@@ -49,7 +49,7 @@ function createEmployee(salary: string | number): Director | Teacher {
 
 type Subjects = "Math" | "History";
 
-export function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else {
